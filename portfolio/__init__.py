@@ -12,7 +12,7 @@ def create_app():
             "categories": ["Python","HTML","CSS"],
             "slug": "portfolio", # url end-point -> project page
             "demo": "/about/", # demo link
-            "code": "github.com", #repo
+            "code": "https://github.com/VintageStep/portfolio", #repo
             "class": "image-first", #CSS class that help with the main layout
             "description":"While a project like this could be done just with HTML and CSS, " + 
             "I decided to use FLASK to manage url end-points and give it a " +
