@@ -1,0 +1,6 @@
+.venv
+requeriments-dev.txt
+__pychache__
+.vscode
+*.pyc
+.DS_Store

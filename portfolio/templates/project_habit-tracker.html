@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+    <main class="main main--project">
+        <div class="details-card">
+            <img
+                class="hero"
+                src="{{ url_for('static', filename=project['hero']) }}"
+                alt="A hand holding a pen, about to write something in a project planner."
+            />
+
+            <article class="project">
+                <article class="project__content">
+                    <h2 class="project__heading">{{ project['name'] }}</h2>
+
+                    <p> 
+
+                        This project is part of a Python-Flask bootcamp, more details <a class="project__link" 
+                        href="https://www.udemy.com/course/web-developer-bootcamp-flask-python/">here</a>. 
+                        As mentioned earlier, the main purpose of this project was to manage both GET and POST 
+                        requests as well as get a better understanding of URL end-points and the Jinja2 engine.
+                    </p>
+                    <p>
+                        This version is very similar to the one developed in the bootcamp, but I'd 
+                        like to make another iteration, probably adding authentication, task deletion, 
+                        and modification, and the ability to set different intervals for a task, maybe 
+                        something like habit1 every x days, or habit2 twice a day.
+                    </p>
+                </article>
+
+                <section>
+                    <article class="project__meta-group">
+                        <h3 class="project__heading project__heading--meta">Technologies used</h3>
+
+                        <ul class="technology-list">
+                            <li class="technology-list__item">Python</li>
+                            <li class="technology-list__item">HTML</li>
+                            <li class="technology-list__item">CSS</li>
+                        </ul>
+                    </article>
+
+                    <a class="cta" href="{{ project['demo'] }}">
+                        Live Demo
+                    </a>
+                    <a class="cta" href="{{ project['code'] }}">
+                        Source Code
+                    </a>
+                </section>
+            </article>
+        </div>
+    </main>
+
+{% endblock content %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="main main--home">
+    <section class="projects">
+        {% for project in projects %}
+            <article class="project-card__container">
+            
+                <article class="project-card {{ project['class'] }}">
+                    <img class="project-card__image" 
+                        src="{{ url_for('static', filename=project['thumb']) }}" 
+                        alt="{{ project['name'] }} hero image"
+                    />
+                    <section class="project-card__text">
+                        <header class="project-card__meta">
+                            <h2 class="project-card__name">{{ project['name']}}</h2>
+                            <ul class="categories">
+                                {% for category in project['categories'] %}
+                                <li class="categories__tag">{{ category }}</li>
+                                {% endfor %}
+                            </ul>
+                        </header>
+                        <article class="project-card__description">
+                            <p class="project-card__details">
+                                {{ project['description'] }}
+                            </p>
+                        </article>
+                        <div class="project-card__buttons">
+                            <a class="u-bare-link project-card__button" href="{{ url_for('project', slug=project['slug'])}}">More Info</a>
+                            <a class="u-bare-link project-card__button" href="{{ project['demo'] }}">Live Demo</a>
+                            <a class="u-bare-link project-card__button" href="{{ project['code'] }}">Source Code</a>
+                        </div>
+                    </section>
+                </article>
+            </article>
+        {% endfor %}
+    </section>
+</main>
+{% endblock %}

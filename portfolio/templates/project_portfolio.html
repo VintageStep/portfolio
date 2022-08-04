@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block content %}
+    <main class="main main--project">
+        <div class="details-card">
+            <img
+                class="hero"
+                src="{{ url_for('static', filename=project['hero']) }}"
+                alt="A hand holding a pen, about to write something in a project planner."
+            />
+
+            <article class="project">
+                <article class="project__content">
+                    <h2 class="project__heading">{{ project['name'] }}</h2>
+
+                    <p>
+                        As I said earlier, this project was made using Flask, It's also a part of 
+                        a web developer bootcamp over Udemy, more details 
+                        <a class="project__link" 
+                        href="https://www.udemy.com/course/web-developer-bootcamp-flask-python/">
+                        here</a>. And while the back-end part hasn't changed significantly, 
+                        I just added more data, the front-end couldn't be more different.
+                    </p>
+                    <p>
+                        I took the opportunity to own this project by creating a layout 
+                        and style on my own and applying what I know about CSS. I found 
+                        plenty of challenges, mostly related to responsiveness and making 
+                        sure content doesn't overflow or affect its container in undesired ways. 
+                        I'm sure the CSS style sheet is a bit messy, but I'm aware of possible 
+                        improvements that can be made.
+                    </p>
+                    <p>
+                        An interesting feature of the project is that most of the project is 
+                        dynamic excluding the about page and the pages of the projects themselves, 
+                        like this very one! This gives me the chance to add more projects to the main 
+                        layout without effort while being able to personalize pages as much as I want, 
+                        I will take advantage of this later, on the page for front-end snippets.
+                    </p>
+                    <p>
+                        
+                        Lastly, I designed all the images used in this project using <a class="project__link" 
+                        href="https://www.figma.com/">Figma</a>. Some components of the wireframes come from 
+                        <a class="project__link" href="https://www.lofiwireframekit.com">here</a>. And I have 
+                        to thank <a class="project__link" href="http://www.davewhitley.com">Dave Whitley</a> 
+                        for them. As you might have guessed the wireframes on the portfolio are not the ones 
+                        I originally used when designing the different projects, but I think they convey the 
+                        idea much better.
+                    </p>
+                </article>
+
+                <section>
+                    <article class="project__meta-group">
+                        <h3 class="project__heading project__heading--meta">Technologies used</h3>
+
+                        <ul class="technology-list">
+                            <li class="technology-list__item">Python</li>
+                            <li class="technology-list__item">HTML</li>
+                            <li class="technology-list__item">CSS</li>
+                        </ul>
+                    </article>
+
+                    <a class="cta" href="{{ project['demo'] }}">
+                        Live Demo
+                    </a>
+                    <a class="cta" href="{{ project['code'] }}">
+                        Source Code
+                    </a>
+                </section>
+            </article>
+        </div>
+    </main>
+
+{% endblock content %}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Ortega | Portfolio </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,
+    wght@0,200;0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <header class="header">
+        <h1>Thomas Ortega</h1>
+        <nav class="nav">
+            <a href="{{ url_for('index') }}" class="nav__link {{ 'nav__link--active' if request.path == url_for('index') }}">
+                Projects
+            </a>
+            <a href="{{ url_for('about') }}" class="nav__link {{ 'nav__link--active' if request.path == url_for('about') }}">
+                About
+            </a>
+            <a href="{{ url_for('contact') }}" class="nav__link {{ 'nav__link--active' if request.path == url_for('contact') }}">
+                Contact
+            </a>
+        </nav>
+    </header>
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>

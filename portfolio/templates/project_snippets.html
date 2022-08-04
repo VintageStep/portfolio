@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+    <main class="main main--project">
+        <div class="details-card">
+            <img
+                class="hero"
+                src="{{ url_for('static', filename=project['hero']) }}"
+                alt="A hand holding a pen, about to write something in a project planner."
+            />
+
+            <article class="project">
+                <article class="project__content">
+                    <h2 class="project__heading">{{ project['name'] }}</h2>
+
+                    <p>
+                        I find CSS quite fun to play with, it seems that just a few years
+                        ago it was way more difficult to handle, I won't say it's the easiest 
+                        either, but the more I know the more I want to try. I will be uploading 
+                        snippets over codepen and listing them here.
+                    </p>
+                    <p>
+                        So far I avoided fidgeting with JavaScript, I wanted to avoid 
+                        relying on it unnecessarily so later on I use it just when 
+                        it's necessary, but learning it is a task that's happening 
+                        sooner than later and I hope I find creative ways to integrate 
+                        it to my future snippets, I do have a couple of ideas worth 
+                        trying.
+                    </p>
+                </article>
+
+                <section>
+                    <article class="project__meta-group">
+                        <h3 class="project__heading project__heading--meta">Technologies used</h3>
+
+                        <ul class="technology-list">
+                            <li class="technology-list__item">HTML</li>
+                            <li class="technology-list__item">CSS</li>
+                        </ul>
+                    </article>
+
+                    <a class="cta" href="https://{{ project['demo'] }}">
+                        Live Demo
+                    </a>
+                    <a class="cta" href="https://{{ project['code'] }}">
+                        Source Code
+                    </a>
+                </section>
+            </article>
+        </div>
+    </main>
+
+{% endblock content %}

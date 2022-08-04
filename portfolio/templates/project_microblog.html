@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+    <main class="main main--project">
+        <div class="details-card">
+            <img
+                class="hero"
+                src="{{ url_for('static', filename=project['hero']) }}"
+                alt="A hand holding a pen, about to write something in a project planner."
+            />
+
+            <article class="project">
+                <article class="project__content">
+                    <h2 class="project__heading">{{ project['name'] }}</h2>
+
+                    <p>
+
+                        This project is part of a Python-Flask bootcamp, more details <a class="project__link" 
+                        href="https://www.udemy.com/course/web-developer-bootcamp-flask-python/">here</a>. 
+                        The purpose of this project was to know the basics of the Jinja2 engine, how dynamic 
+                        content is managed using Flask, and an introduction to MongoDB and No-SQL.
+                    </p>
+                    <p>
+                        For a future iteration I'd like to add authentication, the ability to append images to post, 
+                        prevent duplicate requests from happening, make titles distinct from the content of the post, 
+                        and a dark mode.
+                    </p>
+                </article>
+
+                <section>
+                    <article class="project__meta-group">
+                        <h3 class="project__heading project__heading--meta">Technologies used</h3>
+
+                        <ul class="technology-list">
+                            <li class="technology-list__item">Python</li>
+                            <li class="technology-list__item">HTML</li>
+                            <li class="technology-list__item">CSS</li>
+                        </ul>
+                    </article>
+
+                    <a class="cta" href="https://{{ project['demo'] }}">
+                        Live Demo
+                    </a>
+                    <a class="cta" href="https://{{ project['code'] }}">
+                        Source Code
+                    </a>
+                </section>
+            </article>
+        </div>
+    </main>
+
+{% endblock content %}
