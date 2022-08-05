@@ -43,6 +43,8 @@ Header
 .nav__link{
     text-decoration: none;
     color: var(--jet);
+    transition-property: color;
+    transition-duration: .2s;
 }
 .nav__link:not(:last-of-type){
     margin-right: 2.5rem;
@@ -108,9 +110,13 @@ Contact
 .contact__link{
     text-decoration: none;
     color: var(--jet);
+    transition-property: color;
+    transition-duration: .2s;
 }
 .project__link{
     color: var(--jet);
+    transition-property: color;
+    transition-duration: .2s;
 }
 .contact__link:hover,
 .project__link:hover {
@@ -212,6 +218,8 @@ Index
     padding: .2em .8em;
     border: 1px solid var(--byzantinum);
     border-radius: .2em;
+    transition-property: background-color, color;
+    transition-duration: .3s;
 
 }
 
@@ -293,6 +301,8 @@ Project details
     color: var(--byzantinum);
     text-decoration: none;
     margin-bottom: 1rem;
+    transition-property: background-color, color;
+    transition-duration: .3s;
 }
 
 .cta:hover{
