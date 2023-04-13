@@ -1,1 +1,1 @@
-web: gunicorn "portfolio:create_app()"
+web: gunicorn -b :$PORT portfolio:app
