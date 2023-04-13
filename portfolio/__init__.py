@@ -6,6 +6,21 @@ def create_app():
 
     projects = [
         {
+            "name": "Another Port of Northwind DB for Oracle", #more exactly like title
+            "thumb": "images/northwind.png", #img for card ver
+            "hero": "images/northwind-hero.svg", # img for detailed ver
+            "categories": ["SQL","PL-SQL"],
+            "slug": "northwind", # url end-point -> project page
+            "demo": "https://github.com/VintageStep/NorthwindOracle_DDL", # demo link
+            "code": "https://github.com/VintageStep/NorthwindOracle_DDL", #repo
+            "class": "text-first", #CSS class that help with the main layout
+            "description":"When I was studying Oracle Database I realized that " + 
+            "the examples provided weren't enough for my liking. And since I'm familiar " +
+            "with Northwind-DB, I decided to make a port of it myself. This script preserves " +
+            "regional characters and automates the creation of the schema. There's no Live Demo " +
+            "available for this project, but the source code should suffice.",
+        },
+        {
             "name": "Portfolio", #more exactly like title
             "thumb": "images/portfolio.svg", #img for card ver
             "hero": "images/portfolio-hero.svg", # img for detailed ver

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+    <main class="main main--project">
+        <div class="details-card">
+            <img
+                class="hero"
+                src="{{ url_for('static', filename=project['hero']) }}"
+                alt="Screen capture of an instance of Northwind working on SQL Developer."
+            />
+            <article class="project">
+                <article class="project__content">
+                    <h2 class="project__heading">{{ project['name'] }}</h2>
+
+                    <p> 
+                        This project ports one of the well-known Access and SQL-Server demo databases
+                        to Oracle Database. Featuring a fictonal company called Nortwind Traders. Its 
+                        popularity comes from the fact that its data is well curated and as 
+                        learning material is one of the best. No matter if you're just beggining with SQL,
+                        studying T-SQL(SQL equivalent of PL-SQL) or even learning to develop apps with data access,
+                        the data is robust enough to help you study what relational databases are capable of.
+                    </p>
+                    <p>
+                        The motivation behind this project stemmed from my dissatisfaction with the demo schemas 
+                        available in the version of Oracle Database that I was using. Although this was not the 
+                        first time I attempted to find an alternative, previous attempts failed to consider the 
+                        European regional characters stored in the original version. Additionally, they did not 
+                        provide an installation procedure that followed best practices, such as assigning a dedicated 
+                        owner and tablespace, or offering automated scripts to simplify the installation process. 
+                        As a result, I decided to create my own scipts to address these issues.
+                    </p>
+                </article>
+
+                <section>
+                    <article class="project__meta-group">
+                        <h3 class="project__heading project__heading--meta">Technologies used</h3>
+
+                        <ul class="technology-list">
+                            <li class="technology-list__item">SQL</li>
+                            <li class="technology-list__item">PL-SQL</li>
+                        </ul>
+                    </article>
+
+                    <a class="cta" href="{{ project['code'] }}">
+                        Source Code
+                    </a>
+                </section>
+            </article>
+        </div>
+    </main>
+
+{% endblock content %}
